@@ -1,4 +1,53 @@
-<form action="/cool_url" method="get">>
+
+
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+
+  <!-- Put your challenge-specific CSS in here -->
+  <link rel="stylesheet" href="/css/main.css">
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Craigslist Buatan Malaysia!</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <br clear="all">
+    </nav>
+    <div class="content">
+      <h2>All Categories</h2>
+      <section>
+        <!-- Somehow generate the categories from the table dynamically -->
+        <ul>
+          <li><a href="#">params[category[0]]</a></li>
+          <li><a href="#">params[category[1]]</a></li>
+          <li><a href="#">params[category[2]]</a></li>
+        </ul>
+      </section>
+      <section>
+
+      </section>
+    </div>
+    <div class="footer">
+      Copyright &copy; 2015 SuperDuo, Inc.
+    </div>
+  </div>
+</body>
+
+
+
+<!-- <form action="/cool_url" method="get">>
   <p>Form 1</p>
   <input type="text" name="cool_input">
   <input type="submit" value="Submit!">
@@ -33,4 +82,4 @@
     </select>
   </div>
   <input type="submit" value="Post Cool URL!">
-</form>
+</form> -->

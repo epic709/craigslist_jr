@@ -4,15 +4,22 @@ get '/' do
   erb :index
 end
 
-get '/cool_url' do
-  puts "[LOG] Getting /cool_url"
+get '/all_categories' do
+  puts "[LOG] Getting /all_categories"
   puts "[LOG] Params: #{params.inspect}"
-  erb :get_cool_url
+  erb :get_all_categories
 end
 
-post '/cool_url' do
-  puts "[LOG] Posting to /cool_url"
+get '/all_posts' do
+  puts "[LOG] Getting /all_posts"
   puts "[LOG] Params: #{params.inspect}"
-  erb :post_cool_url
+  erb :get_all_posts
+end
 
+
+
+post '/new_post' do
+  puts "[LOG] Posting to /new_post"
+  puts "[LOG] Params: #{params.inspect}"
+  erb :post_new_post
 end
