@@ -1,0 +1,29 @@
+<div id="container">
+  <form action="/categories/<%= params[:c_id] %>/post/new" method="post">
+    <p>Create your post for category: <%= params[:c_desc] %></p>
+
+    <p><%= params[:c_id] %></p>
+
+    <br></br>
+    Title: <input type="text" name="p_title">
+    <br></br>
+    Description:
+    <textarea cols="50" row="300" name="p_desc"></textarea>
+    <br></br>
+    Location:
+    <br></br>
+    <input type="radio" name="location" value="KL">KL<br>
+    <input type="radio" name="location" value="PJ" checked>PJ<br>
+    <input type="radio" name="location" value="Cyberjaya">Cyberjaya<br>
+    <br></br>
+    Phone: <input type="text" name="p_phone">
+    <br></br>
+    Email: <input type="text" name="p_email">
+    <br></br>
+    Price: <input type="text" name="p_price">
+    <br></br>
+    <input type="submit" value="Submit!">
+  </form>
+</div>
+
+

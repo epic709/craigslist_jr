@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Welcome to Craigslist Buatan Malaysia!</h1
+      <h1>Welcome to Craigslist Buatan Malaysia!</h1>
     </header>
     <nav>
       <ul>
@@ -22,18 +22,19 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
       <br clear="all">
-
     </nav>
     <div class="content">
-      <h2>All Categories</h2>
+      <h2><%= @cur_post.title %></h2>
       <section>
-        <!-- Somehow generate the categories from the table dynamically -->
-        <ul>
-          <% @categories.each do |ctgr| %>
-          <%   link = "/categories/#{ctgr.id.to_s}" %>
-               <li><a href=<%=link%>><%= ctgr.description %></a></li>
-          <% end %>
-        </ul>
+        <p><%= @cur_post.description %></p>
+        <p><%= @cur_post.location %></p>
+        <p><%= @cur_post.phone_number %></p>
+        <p><%= "RM #{@cur_post.price}" %></p>
+        <p><%= @cur_post.email %></p>
+        <p><%= @cur_post.image_url %></p>
+        <p><%= @cur_post.created_at %></p>
+        <p><%= @cur_post.updated_at %></p>
+
       </section>
       <section>
 
@@ -44,6 +45,3 @@
     </div>
   </div>
 </body>
-
-
-

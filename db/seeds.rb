@@ -3,7 +3,7 @@ require_relative '../app/models/category'
 require_relative '../app/models/post'
 
 #create some dummy data
-cars = Category.create(description: "Cars")
+Category.create(description: "Cars")
 Category.create(description: "Housing")
 Category.create(description: "Food")
 Category.create(description: "Services")

@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Welcome to Craigslist Buatan Malaysia!</h1
+      <h1>Welcome to Craigslist Buatan Malaysia!</h1>
     </header>
     <nav>
       <ul>
@@ -22,16 +22,19 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
       <br clear="all">
-
+      <form action="/categories/<%= params[:c_id] %>" method="post">
+        <input type="submit" value="New Post!">
+        <br></br>
+      </form>
     </nav>
     <div class="content">
-      <h2>All Categories</h2>
+      <h2>All Posts for <%= params[:c_desc] %></h2>
       <section>
         <!-- Somehow generate the categories from the table dynamically -->
         <ul>
-          <% @categories.each do |ctgr| %>
-          <%   link = "/categories/#{ctgr.id.to_s}" %>
-               <li><a href=<%=link%>><%= ctgr.description %></a></li>
+          <% @posts.each do |p| %>
+          <%   link = "/categories/#{p.category_id.to_s}/posts/#{p.id.to_s}" %>
+               <li><a href=<%=link%>><%= p.title %></a></li>
           <% end %>
         </ul>
       </section>
@@ -44,6 +47,3 @@
     </div>
   </div>
 </body>
-
-
-
